@@ -1,0 +1,3 @@
+[submodule "vendor/paws"]
+	path = vendor/paws
+	url = git@github.com:paws-r/paws.git
