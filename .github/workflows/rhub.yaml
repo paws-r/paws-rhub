@@ -58,6 +58,8 @@ jobs:
           job-config: ${{ matrix.config.job-config }}
           
       - name: Update Vendor Dependencies
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: make get-pkg
         
       - uses: r-hub/actions/setup-deps@v1
@@ -91,6 +93,8 @@ jobs:
           job-config: ${{ matrix.config.job-config }}
           
       - name: Update Vendor Dependencies
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: make get-pkg
       
       - uses: r-hub/actions/setup-deps@v1
