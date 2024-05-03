@@ -43,6 +43,8 @@ jobs:
     if: ${{ needs.setup.outputs.containers != '[]' }}
     runs-on: ubuntu-latest
     name: ${{ matrix.config.label }}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     strategy:
       fail-fast: false
       matrix:
@@ -58,8 +60,6 @@ jobs:
           job-config: ${{ matrix.config.job-config }}
           
       - name: Update Vendor Dependencies
-        env:
-          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: make get-pkg
         
       - uses: r-hub/actions/setup-deps@v1
@@ -76,6 +76,8 @@ jobs:
     if: ${{ needs.setup.outputs.platforms != '[]' }}
     runs-on: ${{ matrix.config.os }}
     name: ${{ matrix.config.label }}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     strategy:
       fail-fast: false
       matrix:
@@ -93,8 +95,6 @@ jobs:
           job-config: ${{ matrix.config.job-config }}
           
       - name: Update Vendor Dependencies
-        env:
-          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: make get-pkg
       
       - uses: r-hub/actions/setup-deps@v1
