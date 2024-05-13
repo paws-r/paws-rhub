@@ -1,4 +1,4 @@
-PKG = paws.compute
+PKG = paws.security.identity
 
 
 clear-down:

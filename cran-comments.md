@@ -6,15 +6,9 @@
 
 ## R CMD check results
 
-There were no ERRORs, or WARNINGs.
-Notes:
-checking installed package size ... NOTE
-  installed size is  6.5Mb
-  sub-directories of 1Mb or more:
-    R      3.1Mb
-    help   3.3Mb
+There were no ERRORs, WARNINGs, or Notes.
 
-Maintainer Notes: tarball package size: 1002.02K
+Maintainer Notes: tarball package size:  981.5K
 
 ## Downstream dependencies
 
