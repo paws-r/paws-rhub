@@ -1,6 +1,3 @@
-PKG = paws.security.identity
-
-
 clear-down:
 	@echo "Clear down"
 	@rm -rf R man tests
