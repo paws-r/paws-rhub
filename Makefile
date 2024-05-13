@@ -1,8 +1,4 @@
-clear-down:
-	@echo "Clear down"
-	@rm -rf R man tests
-
-get-pkg: clear-down
+get-pkg:
 	@echo "Update project dependencies"
 	@git submodule init
 	@git submodule update --remote
