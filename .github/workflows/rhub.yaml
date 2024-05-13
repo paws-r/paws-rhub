@@ -59,8 +59,8 @@ jobs:
           token: ${{ secrets.RHUB_TOKEN }}
           job-config: ${{ matrix.config.job-config }}
           
-      - name: Update Vendor Dependencies
-        run: make get-pkg
+#      - name: Update Vendor Dependencies
+#        run: make get-pkg
         
       - uses: r-hub/actions/setup-deps@v1
         with:
@@ -94,8 +94,8 @@ jobs:
           token: ${{ secrets.RHUB_TOKEN }}
           job-config: ${{ matrix.config.job-config }}
           
-      - name: Update Vendor Dependencies
-        run: make get-pkg
+#      - name: Update Vendor Dependencies
+#        run: make get-pkg
       
       - uses: r-hub/actions/setup-deps@v1
         with:
