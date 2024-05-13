@@ -10,7 +10,7 @@ get-pkg: clear-down
 	@git submodule init
 	@git submodule update --remote
 	@echo "Moving package: ${PKG} to root"
-	@cp -rf ./vendor/paws/cran/${PKG}/ . 
+	@cp -af ./vendor/paws/cran/${PKG}/. ./
 	@echo "^.github" >> .Rbuildignore
 	@echo "^Makefile" >> .Rbuildignore
 	@echo "^vendor" >> .Rbuildignore
